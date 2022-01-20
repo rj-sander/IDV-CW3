@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <link href="c3-0.7.20 (3)\c3-0.7.20\c3.min.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="d3\d3.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="c3-0.7.20 (3)\c3-0.7.20\c3.min.js"></script>
+    <script type="text/javascript"></script>
+
+  </head>
+  <body>
+    <h2>remand total</h2>
+    <p>According to the prisoner rights charity,<a href="https://www.fairtrials.org/news/one-ten-remand-population%C2%A0-england-and%C2%A0wales%C2%A0have-been-prison-more-year%C2%A0" target="_blank"> Fair Trials </a>, there are currently 3949 remand prisoners that have been heald for longer than the six month limit.
+    This makes up nearly 5% of the UK's entire prison population of roughly 87,500. </p>
+    <div id="chart"></div> <!-- retweeters piechart -->
+
+<script type="text/javascript">
+   var chart = c3.generate({
+        bindto: '#chart',
+        data: {
+          columns: [
+            ['remanded more than 6 months', 4.5],
+            ['general remand population', 11.5],
+            ['sentenced population', 84]
+          ],
+          type : 'pie'
+        }
+    });
+</script>
+<p>Ironically, Fair trials claim that the delays are getting so bad that some defendants are needlessly pleading guilty in order to get out of prison because the time spent behind
+bars has already exceeded the maximum sentence carried by their alleged crimes.</p>
+
+<h2>crowding over time</h2>
+<p>The UK's prison population has been <a href="https://www.statista.com/statistics/314700/uk-prison-population/#:~:text=As%20of%202021%2C%20there%20were,1.4%20thousand%20in%20Northern%20Ireland." target="_blank">
+  steadily increasing</a>since the Second World War. Whilst the general population has also <a href="https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates/articles/overviewoftheukpopulation/january2021" target="_blank">increased</a>, the increase in the prison population far exceeds
+  the relative growth. </p>
+  <div id="population_growth">
+    <script type="text/javascript">
+  var chart = c3.generate({
+    bindto: '#population_growth',
+    data: {
+        columns: [
+            ['prison population', 22255, 22920, 44031, 47124, 49699, 71553, 94044, 89132],
+            ['prisoners per 10 million people', 4451, 4407, 8005, 8415, 8719, 12127, 15168, 16700]
+        ],
+        type: 'spline'
+    },
+      axis: {
+        x: {
+            type: 'category',
+            categories: ['1950', '1960', '1970', '1980', '1990', '2000', '2010', '2020',]
+        }
+    },
+});
+</script>
+</div>
+<p>It is worth noting that the overall prison population has fallen over the last year due to the court delays caused by the pandemic.</p>
+<h2>overcrowded prisons</h2>
+<iframe src="https://www.google.com/maps/d/embed?mid=1qbJ0QnkQ5NZ-SH8xuLyZdyghIIW8DDz_&ehbc=2E312F" width="640" height="480"></iframe>
+
+  </body>
+</html>
