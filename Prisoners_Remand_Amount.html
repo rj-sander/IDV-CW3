@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link href="c3-0.7.20\c3.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="d3_5.14.2\d3.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="c3-0.7.20\c3.min.js"></script>
+<script type="text/javascript"></script>
+
+  </head>
+  <body>
+<h2>How many prisoners were on remand in 2019-20?</h2>
+<h3> Breakdown of the 79, 232 prisoners in the UK by cateogry.</h3>
+    <div id="chart">
+     <script type="text/javascript">
+
+
+     var chart = c3.generate({
+         data: {
+             columns: [
+                 ['data1', 30],
+                 ['data2', 120],
+             ],
+             type : 'donut',
+             onclick: function (d, i) { console.log("onclick", d, i); },
+             onmouseover: function (d, i) { console.log("onmouseover", d, i); },
+             onmouseout: function (d, i) { console.log("onmouseout", d, i); }
+         },
+         donut: {
+             title: "Amount of Prisoners"
+         }
+     });
+
+     setTimeout(function () {
+         chart.load({
+             columns: [
+                             ['Category B & C', 40349],
+                             ['Category A', 3278],
+                             ['Category D', 6161],
+                             ['Young People (15-17)', 714],
+                             ['Young People (18-21)', 2230],
+                             ['On Remand', 26499],             ]
+         });
+     }, 1500);
+
+     setTimeout(function () {
+         chart.unload({
+             ids: 'data1'
+         });
+         chart.unload({
+             ids: 'data2'
+         });
+     }, 2500);
+
+
+
+
+
+
+     </script>
+ </div>
+
+
+<br>
+<p>
+bla bla bla
+</p>
+
+
+
+  </body>
+</html>
