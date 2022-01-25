@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>COVID in the Court System</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="description" content="An analysis of how COVID has affected court delays in the UK">
+  <meta name="keywords" content="court delays, ministry of justice, remand, cost">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.9.4/dist/css/uikit.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.9.4/dist/js/uikit.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.9.4/dist/js/uikit-icons.min.js"></script>
+  <link href="js-docs/c3.min.css" rel="stylesheet" type="text/css">
+  <script type="text/javascript" src="js-docs/d3.min.js" charset="utf-8"></script>
+  <script type="text/javascript" src="js-docs/c3.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&family=Roboto:ital,wght@0,100;0,300;0,500;1,100&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: "Roboto Condensed", sans-serif;
+      color: #2b323b;
+    }
+
+    h1 {
+      font-family: "Roboto", sans-serif;
+    }
+
+    p {
+      font-size: 16px;
+      color: #2b323b;
+    }
+
+    h4 {
+      font-family: "Roboto", sans-serif;
+      color: #6c7483;
+    }
+
+    .uk-card-body {}
+
+    a:hover {
+      text-decoration: none;
+    }
+
+    a:link {
+      color: #2b323b;
+    }
+
+    .caption {
+      font-size: 10pt;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Banner -->
+  <div class="uk-tile-default uk-text-center" uk-sticky>
+    <h1>COVID in the Court System</h1>
+    <ul class="uk-subnav uk-subnav-pill uk-flex uk-flex-center" uk-switcher="connect: .uk-switcher">
+      <li><a href="#start" data-uk-scroll>Introduction</a></li>
+      <li><a href="#start" data-uk-scroll>Cases</a></li>
+      <li><a href="#start" data-uk-scroll>Delays</a></li>
+      <li><a href="#start" data-uk-scroll>Overcrowding</a></li>
+      <li><a href="#start" data-uk-scroll>Costs</a></li>
+      <li><a href="#start" data-uk-scroll>Conclusion</a></li>
+
+    </ul>
+
+  </div>
+
+  <!-- Container One Intro -->
+
+  <ul class="uk-switcher">
+
+    <li>
+      <div class="uk-container uk-padding">
+        <p>The Covid-19 pandemic wreaked havoc on the British justice system. Whilst overall crime fell over the lockdown periods, the court system also ground to a halt. Concerns over potentially unfair trials meant that hearings could not move
+          online and this caused some defendants to have to wait unprecedented lengths before they could have their cases heard. This dashboard delves into some of the issues that have arisen from these delays and illustrates how far reaching the
+          problem really is.</p>
+      </div>
+      <div class="uk-child-width-1-2@m uk-child-expand@s" uk-grid>
+        <div>
+          <div class="uk-tile uk-tile-default">
+            <iframe title="Total Prosecution Live Caseload" aria-label="Scatter Plot" id="datawrapper-chart-8ktBU" src="https://datawrapper.dwcdn.net/8ktBU/7/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;"
+              height="400"></iframe>
+            <script type="text/javascript">
+              ! function() {
+                "use strict";
+                window.addEventListener("message", (function(e) {
+                  if (void 0 !== e.data["datawrapper-height"]) {
+                    var t = document.querySelectorAll("iframe");
+                    for (var a in e.data["datawrapper-height"])
+                      for (var r = 0; r < t.length; r++) {
+                        if (t[r].contentWindow === e.source) t[r].style.height = e.data["datawrapper-height"][a] + "px"
+                      }
+                  }
+                }))
+              }();
+            </script>
+          </div>
+        </div>
+        <div>
+          <div class="uk-tile uk-tile-default">
+            <p> The pandemic not just affected businesses and the economy, it also overloaded the already burdened British justice system. </p>
+            <p> The number of live caseload with the prosecution at both, the magistrate and the crown court went up from 98,392 in April 2019 to 165,157 in March 2021, increasing by 68% overall. </p>
+            <p> This backlog resulted in hearings being delayed, rescheduled or cancelled often and while the cases that would earlier take less than four hearings for conclusion, started being pushed beyond six in many cases. </p>
+          </div>
+        </div>
+      </div>
+      </div>
+
+    </li>
+    <!-- Container 2 Cases-->
+
+    <li>
+      <div class="uk-child-width-1-2@m uk-child-expand@s" uk-grid>
+        <div>
+          <div class="uk-tile uk-tile-default">
+            <h2>The number of cases outstanding for trial cases in the Crown Court in England and Wales</h2>
+            <div class="flourish-embed flourish-chart" data-src="visualisation/8475988">
+              <script src="https://public.flourish.studio/resources/embed.js"></script>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="uk-tile uk-tile-default">
+            <p>This graph shows the quarterly change in the number of outstanding cases at Crown Court since 2018, showing a slow upward trend from the first quarter of 2019, followed by a sharp increase in the wake of the pandemic. This trend is
+              particularly pronounced in London, but is occurring in all areas of the study area, indicating that the Crown Court continues to be stretched beyond its capacity to handle.</p>
+          </div>
+        </div>
+        <div>
+          <div class="uk-tile uk-tile-default">
+            <h2>Average waiting time of defendants in the Crown Court in England and Wales</h2>
+            <div class="flourish-embed flourish-chart" data-src="visualisation/8478025">
+              <script src="https://public.flourish.studio/resources/embed.js"></script>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="uk-tile uk-tile-default">
+            <p>This graph shows the change in the average waiting time for defendants in the Crown Court in England and Wales since 2016. The number of both convicted and acquitted cases has increased significantly since the third quarter of 2020,
+              with the overall average waiting time increasing by eleven weeks by the third quarter of 2021.</p>
+          </div>
+        </div>
+        <div>
+          <div class="uk-tile uk-tile-default">
+            <h2>Average hearing times of trial cases in the Crown Court England and Wales by quarter</h2>
+            <div class="flourish-embed flourish-chart" data-src="visualisation/8478544">
+              <script src="https://public.flourish.studio/resources/embed.js"></script>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="uk-tile uk-tile-default">
+            <p>On the other hand, the following graph shows the average time to hear a case in the Crown Court in England and Wales. This one shows, for a change, a difference in trend between guilty and not guilty cases. The former has remained
+              essentially unchanged since the pandemic. In contrast, the latter continues to trend upwards, accelerating further since the pandemic, with the time for stressful hearings increasing by 2.5 hours between the first quarter of 2016 and
+              the third quarter of 2021.</p>
+          </div>
+        </div>
+      </div>
+    </li>
+    <!-- Container 3 Delays -->
+    <li>
+      <div class="uk-child-width-1-2@m uk-child-expand@s" uk-grid>
+        <div>
+          <div class="uk-tile uk-tile-default">
+            <h2>Wait time for people under remand:</h2>
+            <div class="flourish-embed flourish-chart" data-src="visualisation/8476265">
+              <script src="https://public.flourish.studio/resources/embed.js"></script>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="uk-tile uk-tile-default">
+            <h2>Defendents proven guilty after more than four hearings:</h2>
+            <div class="flourish-embed flourish-chart" data-src="visualisation/8477213">
+              <script src="https://public.flourish.studio/resources/embed.js"></script>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="uk-tile uk-tile-default">
+            <div class="flourish-embed flourish-map" data-src="visualisation/8478927">
+              <script src="https://public.flourish.studio/resources/embed.js"></script>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="uk-tile uk-tile-default">
+            <p> The higher time taken to process a case at each step by the crown courts escalated the human cost, as victims of rape and domestic abuse had to wait longer to get justice. In some regions, like London South, it took on an average 196
+              days for the crown courts to make a pre-charge decision in rape cases in 2020-21, whereas this number was 95 days in 2018-19. </p>
+            <p> Even the people held on suspicion of guilt where kept on remand, both on bail and in the prisons, for a longer period as the wait times for them increased manifold. This meant that their civil liberties, especially for those pleading
+              not guilty, were curtailed for a longer period, impacting their mental health and wellbeing. </p>
+          </div>
+        </div>
+      </div>
+    </li>
+    <!-- Container 4 Overcrowding -->
+    <li>
+      <div class="uk-child-width-1-2@m uk-child-expand@s" uk-grid>
+        <div>
+          <div class="uk-tile uk-tile-default">
+            <div id="remand" class="uk-responsive"></div>
+          </div>
+        </div>
+        <div>
+          <div class="uk-tile uk-tile-default">
+            <h2>Remand Total</h2>
+            <p>According to the prisoner rights charity,<a href="https://www.fairtrials.org/news/one-ten-remand-population%C2%A0-england-and%C2%A0wales%C2%A0have-been-prison-more-year%C2%A0" target="_blank"> Fair Trials</a>, there are currently 3949
+              remand prisoners that have been heald for longer than the six month limit. This makes up nearly 5% of the UK's entire prison population of roughly 87,500.<br><br>Ironically, Fair trials claim that the delays are getting so bad that some
+              defendants are needlessly pleading guilty in order to get out of prison because the time spent behind bars has already exceeded the maximum sentence carried by their alleged crimes. The legal time limit for a person to be held on remand
+              is six months. This was <a href="https://www.fairtrials.org/news/uk-government-ends-custody-time-limit-extension-england-and-wales" target="_blank">extended</a> to eight months during the pandemic in September 2020, but this was removed
+              in June of 2021.</p>
+          </div>
+        </div>
+        <div>
+          <div class="uk-tile uk-tile-default">
+            <h2>Crowding over time</h2>
+            <p>The UK's prison population has been <a href="https://www.statista.com/statistics/314700/uk-prison-population/#:~:text=As%20of%202021%2C%20there%20were,1.4%20thousand%20in%20Northern%20Ireland." target="_blank"> steadily increasing</a>
+              since the Second World War. Whilst the general population has also <a href="https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates/articles/overviewoftheukpopulation/january2021"
+                target="_blank">increased</a>, the increase in the prison population far exceeds the relative growth. It is worth noting that the overall prison population has fallen over the last year due to the court delays caused by the pandemic.
+            </p>
+          </div>
+        </div>
+        <div>
+          <div class="uk-tile uk-tile-default">
+            <div id="population_growth"></div>
+          </div>
+        </div>
+      </div>
+      <div class="uk-container-expand uk-height-viewport uk-padding">
+        <h2>Overcrowded Prisons</h2>
+        <p>This map shows every prison in England and Wales that is currently running at above its original capacity. All told, this accounts for over half of the prisons in the country and does not include those running at 100% capacity. The data
+          comes from a <a href=” https://researchbriefings.files.parliament.uk/documents/SN04334/SN04334.pdf” target=”_blank”>House of Commons report</a> from October of 2021. Scotland and Northern Ireland were not included in the data, but <a href=”
+            https://www.scottishlegal.com/articles/overcrowding-in-scottish-prisons-among-worst-in-europe#:~:text=Scottish%20prisons%20are%20substantially%20overcrowded,104.3%20inmates%20per%20100%20places.” Target=”_blank”>reports </a>have shown
+          that the problem doe extend north of the border, with over 104 inmates per every 100 places in Scottish prisons. Northern Ireland bucks the trend by continuing to run well below capacity. This is largely due to the decline in hostilities
+          meaning less people are arrested for sectarian crimes. The Good Friday Agreement also saw the
+          <a href=http://news.bbc.co.uk/hi/english/static/northern_ireland/understanding/themes/prisoner_release.stm target=”_blank”release of 500</a> loyalist and republican offenders, the equivalent of more than a third of NI’s entire current
+            prison population of 1448.
+        </p>
+        <iframe src="https://www.google.com/maps/d/embed?mid=1qbJ0QnkQ5NZ-SH8xuLyZdyghIIW8DDz_&ehbc=2E312F" width="100%" style="height:70vh !important;"></iframe>
+      </div>
+      <!-- Container 5 Cost-->
+    <li>
+      <div class="uk-child-width-1-2@m uk-child-expand@s" uk-grid>
+        <div>
+          <div class="uk-tile uk-tile-default">
+            <h2>How much did each type of prisoner cost in 2019-20?</h2>
+            <h3> Breakdown of the 79,232 prisoners in the UK by category.</h3>
+            <div id="costchart"></div>
+          </div>
+        </div>
+        <div>
+          <div class="uk-tile uk-tile-default">
+            <caption><u>Definitions:</u><br>
+              <b>Category A:</b> The most difficult and dangerous prisoners in England and Wales.<br>
+              <b>Category B & C: </b>Adult male prisoners and closed condition adult females who are serving medium to long-term sentences.<br>
+              <b>Category D:</b> adult male prisoners and adult females whose risk of absconding is considered to be low, or who are of little risk to the public because of the nature of their offence.
+            </caption>
+            <p>Prisoners on remand are unconvicted prisoners meaning they have rights they can still exert in prison. For instance, prisoners on remand can <a
+                href="http://www.prisonreformtrust.org.uk/WhatWeDo/Projectsresearch/Remand/rightsonremand">wear their own clothes a keep their right to vote </a>. They can also seek support to get ready for their trial, keep their home and job as
+              well as being involved with a running, legal business. <br>It is interesting that while prisoners on remand represent the 2nd largest population of prisoners, they are only the 4th most expensive on an individual basis.<br>However,
+              there is a difference between the <a href="https://www.gov.uk/government/statistics/prison-performance-statistics-2019-to-2020"> yearly price for a male and female prisoner on remand</a>. For a male prisoner the cost is of £43 503 per
+              year and £119 per day whereas for a female prisoner it is £57 819 per year and £158 per day.<br>The total resource expenditure reported to take care of for prisoners on remand was £1 357 359 340 in 2019-20.
+            </p>
+          </div>
+        </div>
+        <div>
+          <div class="uk-tile uk-tile-default">
+            <h2>How many prisoners were on remand in 2019-20?</h2>
+            <h3> Breakdown of the 79, 232 prisoners in the UK by cateogry.</h3>
+            <div id="remandchart"></div>
+          </div>
+        </div>
+        <div>
+          <div class="uk-tile uk-tile-default">
+            <div class="flourish-embed flourish-scatter" data-src="visualisation/8488993">
+              <script src="https://public.flourish.studio/resources/embed.js"></script>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+    <!-- Container 5 Conclusion -->
+    <li>
+      <div class="uk-child-width-1-2@m uk-child-expand@s" uk-grid>
+        <div>
+          <div class="uk-tile uk-tile-default">
+            <p> A <a href="https://committees.parliament.uk/committee/172/constitution-committee/news/153596/report-published-on-the-impact-of-covid19-on-courts-and-tribunals-in-england-and-wales/"> report published by the Constitution Committee </a>
+              about the impact of pandemic on courts and tribunals in 30th March 2021, presented the following key findings: </p>
+            <ol>
+              <li> In the decade before the pandemic, the government funding reduced significantly, with legal budgets cut and court buildings closed. This magnified the crisis when the pandemic hit, as the courts were unable to cope with the volume
+                of cases </li>
+              <li> Remote hearings during the pandemic, while being the only feasible solution, brought significant technological challanges as not every court and vulnerable litigants were able to adapt to it </li>
+              <li> The interruption to regular operations had a negative impact on public funds available for those who could not afford legal representation. The report called on the government to increase the legal aid to reduce the barriers faced
+                by lower income groups to get a fair trial </li>
+              <li> The courts may take several years to clear the backlog of criminal, family and employment cases to return to the pre-pandemic levels. </li>
+              <li> There is still a great of data that isn't available on the fuctioning of the courts, and the report recommends that the government trigger a data reform so the real impact of remote hearings can be ascertained. </li>
+            </ol>
+          </div>
+        </div>
+        <div>
+          <div class="uk-tile uk-tile-default">
+            <p>To reduce the backlog temporarily, 72 Nightingale courtrooms were started between July 2020 and July 2021 across all jurisdictions in three phases, that served as extensions of existing courts but in different venues. Many of these
+              are expected to function till March 2022, and judges have seen a positive impact of this system, without which the outstanding cases would have been higher by 4470 cases in April 2021. Recently, in the most significant change to the
+              legal system, the magistrates' courts are being given the power to sentence a criminal for upto one year, which was six months earlier, to further reduce the burden on the crown courts. </p>
+
+            <iframe title="Nightingale Courts Created During Pandemic " aria-label="Table" id="datawrapper-chart-VZrWC" src="https://datawrapper.dwcdn.net/VZrWC/1/" scrolling="no" frameborder="0"
+              style="width: 0; min-width: 100% !important; border: none;" height="297"></iframe>
+            <script type="text/javascript">
+              ! function() {
+                "use strict";
+                window.addEventListener("message", (function(e) {
+                  if (void 0 !== e.data["datawrapper-height"]) {
+                    var t = document.querySelectorAll("iframe");
+                    for (var a in e.data["datawrapper-height"])
+                      for (var r = 0; r < t.length; r++) {
+                        if (t[r].contentWindow === e.source) t[r].style.height = e.data["datawrapper-height"][a] + "px"
+                      }
+                  }
+                }))
+              }();
+            </script>
+          </div>
+
+  </ul>
+  <!-- Footer -->
+  <footer class="uk-margin-large uk-padding uk-text-center">
+    <p>This Dashboard was created by Bex Sander, Joe Skirkowski, Thomas McGrath, Yuta Sato and Riddhi K</p> <br>
+    <a href="#start" data-uk-scroll="">to the top</a></p>
+  </footer>
+</body>
+<script type="text/javascript">
+  function makeRemandPie() {
+    var chart = c3.generate({
+      bindto: '#remand',
+      data: {
+        columns: [
+          ['remanded more than 6 months', 4.5],
+          ['general remand population', 11.5],
+          ['sentenced population', 84]
+        ],
+        type: 'pie'
+      }
+    });
+  }
+
+  function makePopulationChart() {
+    var chart = c3.generate({
+      bindto: '#population_growth',
+      data: {
+        columns: [
+          ['prison population', 22255, 22920, 44031, 47124, 49699, 71553, 94044, 89132],
+          ['prisoners per 10 million people', 4451, 4407, 8005, 8415, 8719, 12127, 15168, 16700]
+        ],
+        type: 'spline'
+      },
+      axis: {
+        x: {
+          type: 'category',
+          categories: ['1950', '1960', '1970', '1980', '1990', '2000', '2010', '2020', ]
+        }
+      },
+    });
+  }
+
+  function makeCostChart() {
+    var chart = c3.generate({
+      bindto: '#costchart',
+      data: {
+        x: 'x',
+        columns: [
+          ["x", "Young People (15-17)", "Young People (18-21)", "Category A", "On Remand", "Category D", "Category B & C"],
+          ["Cost per year(?)", 144718, 79500, 69085, 50661, 45230, 42525]
+        ],
+        type: 'bar'
+      },
+      axis: {
+        x: {
+          type: 'category' // this needed to load string x value
+        },
+
+      }
+    });
+  }
+
+  function makeRemandChart() {
+    var chart = c3.generate({
+      bindto: '#remandchart',
+      data: {
+        columns: [
+          ['Category B & C', 40349],
+          ['Category A', 3278],
+          ['Category D', 6161],
+          ['Young People (15-17)', 714],
+          ['Young People (18-21)', 2230],
+          ['On Remand', 26499],
+        ],
+        type: 'donut',
+      },
+      donut: {
+        title: "Amount of Prisoners"
+      }
+    });
+  }
+
+  function redrawCharts() {
+    makeRemandPie();
+    makeCostChart();
+    makePopulationChart();
+    makeRemandChart();
+  }
+
+  document.addEventListener('click', () => {
+    setTimeout(redrawCharts, 500);
+  });
+  window.addEventListener('load', () => {
+    redrawCharts()
+  });
+
+  window.onresize = redrawCharts;
+</script>
+
+</html>
